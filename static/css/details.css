@@ -1,0 +1,130 @@
+/* Set body background color to white and text color to black */
+body {
+  background: #1E2129;
+  color: #fff;
+}
+
+/* Container for the whole page */
+#details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-top: 90px;
+}
+
+.Genus-card {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(247, 247, 247, 0.1);
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left Side: Image, Genus Name, and Map */
+.genus-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  margin-bottom: 30px;
+}
+
+.genus-left img {
+    width: auto; 
+    height: auto; 
+    max-width: 100%; 
+    max-height: 350px; 
+    object-fit: contain; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for Back Button */
+.container.mt-3 {
+  position: relative;
+}
+
+.genus-name-container {
+  position: absolute;
+  top: 90px;
+  left: 7%;
+  height: 60px;
+  width: 34%;
+  background-color: #262a35;
+  padding-right: 420px;
+  border-radius: 8px;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
+}
+
+/* Genus Name */
+.genus-left h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+  white-space: nowrap; 
+  padding-left: 10px;
+}
+
+.genus-map {
+  width: 100%;
+  height: 250px;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Side: Details */
+.genus-right {
+  width: 50%;
+  padding: 20px;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.genus-right h4 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.genus-right p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.genus-right p strong {
+  font-weight: bold;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #d9534f;
+  border-color: #d9534f;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #ea1b13;
+  border-color: #ea1b13;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .genus-left,
+  .genus-right {
+    width: 80%;
+  }
+}

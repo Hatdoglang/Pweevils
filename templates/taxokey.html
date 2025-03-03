@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Species</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename='img/weevil.png') }}" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/taxo.css') }}" rel="stylesheet">
+
+
+    
+</head>
+
+<body style=" background-color: #f8f8f8; /* Light gray background */
+background-image: 
+  linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+background-size: 20px 20px; /* Grid size */">
+   
+
+    <!-- Notification -->
+    <div id="notification" class="alert alert-danger" style="display: none;">
+        <!-- Notification message will be inserted by JavaScript -->
+    </div>
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+    
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+            <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="">
+        </a>
+    
+          <nav style="margin-right: 55px;" id="navbar" class="navbar">
+            <ul>
+              <li><a href="{{ url_for('index') }}">Home</a></li>
+              <li class="dropdown">
+                <a href="#"><span>Weevils</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('genera') }}">Genus</a></li>
+                  <li><a href="{{ url_for('sub_genus') }}">Sub-Genus</a></li>
+                </ul>
+              </li>
+              <li class="scan-icon">
+                <a href="{{ url_for('prediction') }}">
+                  <i class="bi bi-qr-code-scan"></i>
+                </a>
+              </li>
+              <li><a href="{{ url_for('map_view') }}">Map</a></li>
+              <li><a href="{{ url_for('taxo_key') }}" class="active">Taxonomic key</a></li>
+              <li><a href="{{ url_for('about') }}" >About</a></li>
+            </ul>
+          </nav><!-- .navbar -->
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    
+      </header><!-- End Header -->
+
+    <main id="main">
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <div class="row">
+                    {% for i in range(1, 8) %}
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="/static/img/Taxo/{{ i }}.jpg" alt="Image {{ i }}" class="card-img clickable-img" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" alt="Modal Image" id="modalImage" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Website</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="https://bootstrapmade.com/">Weevils Team</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <script  src="{{ url_for('static', filename='js/taxo.js') }}"></script>
+
+</body>
+
+</html>

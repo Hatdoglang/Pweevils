@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Weevils - About</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/weevil.png') }}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/scan.css') }}" rel="stylesheet" />
+
+
+
+</head>
+
+<body style=" background-color: #f8f8f8; /* Light gray background */
+background-image: 
+  linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+background-size: 20px 20px; /* Grid size */">
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="">
+      </a>
+
+      <nav style="margin-right: 55px;" id="navbar" class="navbar">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Weevils</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="{{ url_for('genera') }}">Genus</a></li>
+              <li><a href="{{ url_for('sub_genus') }}">Sub-Genus</a></li>
+            </ul>
+          </li>
+          <li class="scan-icon">
+            <a href="{{ url_for('prediction') }}">
+              <i class="bi bi-qr-code-scan"></i>
+            </a>
+          </li>
+          <li><a href="{{ url_for('map_view') }}">Map</a></li>
+          <li><a href="{{ url_for('taxo_key') }}">Taxonomic key</a></li>
+          <li><a href="{{ url_for('about') }}" class="active">About</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade" data-aos-delay="1500">
+
+    <!-- ======= End Page Header ======= -->
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <!-- Section Title -->
+        <div class="section-title text-center">
+          <h2 style="color: black;">Meet our Team</h2>
+          <p style="color: black;">We are a dedicated team of professionals passionate about building an illustrated taxonomic key and online
+            species repository for Philippine weevils. Our goal is to provide an accessible and comprehensive map of
+            weevil distribution.</p>
+        </div>
+
+        <!-- Team Members -->
+        <div class="row justify-content-center">
+
+          <!-- Team Member 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-member" data-aos="fade-up" data-aos-delay="100">
+              <img src="{{ url_for('static', filename='img/Chan.jpg') }}" class="card-img-top" alt="Member 1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Christian Delapos</h5>
+                <p class="card-text">BSIT Student</p>
+                <p class="social-links">
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-member" data-aos="fade-up" data-aos-delay="200">
+              <img src="{{ url_for('static', filename='img/Jiah.jpg') }}" class="card-img-top" alt="Member 2">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jiah Mae Lawas</h5>
+                <p class="card-text">BSIT Student</p>
+                <p class="social-links">
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-member" data-aos="fade-up" data-aos-delay="300">
+              <img src="{{ url_for('static', filename='img/Daven.jpg') }}" class="card-img-top" alt="Member 3">
+              <div class="card-body text-center">
+                <h5 class="card-title">Daven Jayson Agbas</h5>
+                <p class="card-text">BSIT Student</p>
+                <p class="social-links">
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Website</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">Weevils Team</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>

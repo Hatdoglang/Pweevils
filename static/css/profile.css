@@ -1,0 +1,123 @@
+.custom-section {
+    position: relative;
+    background: none;
+}
+
+.container-wrapper {
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+}
+
+.row-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.col-wrapper {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 23rem;
+}
+
+.custom-card {
+    position: relative;
+    background: transparent;
+    /* Transparent black background */
+    margin-top: 20px;
+    margin-left: -60px;
+    margin-bottom: -40px;
+    align-items: center;
+    width: 500px;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.5);
+    /* Glowing effect */
+}
+
+.custom-card-body {
+    padding: 1.5rem;
+}
+
+.avatar-wrapper {
+    flex-shrink: 0;
+}
+
+.avatar-img {
+    width: 180px;
+    border-radius:0 10px 0 10px;
+    margin-right: 30px;
+}
+
+.details-wrapper {
+    flex-grow: 4;
+    margin-left: 1.5rem;
+}
+
+
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* Changed to column */
+    justify-content: start;
+    align-items: start;
+    height: 190px;
+    /* Changed to start */
+    border-radius: 0.3rem;
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.5);
+    /* Glowing effect */
+    padding: 0.5rem;
+}
+
+
+.article-info,
+.follower-info,
+.rating-info {
+    flex: 1;
+    color: #fff;
+}
+
+.name,
+.address,
+.email {
+    color: white;
+    
+}
+
+.small {
+    font-size: 0.875rem;
+    color: #fff;
+    margin: 0 6px 0 12px;
+}
+
+.mb-0 {
+    margin-bottom: 10px;
+    /* Add space below each element */
+    margin-top: 10px;
+    /* Add space above each element */
+    font-size: 12px;
+    color: #fff;
+    margin: 0 8px 0 12px;
+    /* Resetting margin, only use margin-bottom and margin-top */
+}
+
+.mb-1 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 8px 0 12px;
+    /* Resetting margin, only use margin-bottom and margin-top */
+    color: #fff;
+}
+
+.details-wrapper p{
+    margin-top: -6px;
+    margin-bottom: 10px;
+}
+.details-wrapper label{
+    margin-bottom: 30px;
+}

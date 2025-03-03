@@ -1,0 +1,25 @@
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            text-align: center;
+            padding: 10px;
+            height: 250px;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card-img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .modal-body img {
+            max-height: 90vh;
+            width: auto;
+            object-fit: contain;
+        }

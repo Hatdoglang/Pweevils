@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Genus Details</title>
+  <link href="{{ url_for('static', filename='img/weevil.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/details2.css') }}" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet" />
+  <!-- Font Awesome for the icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background-container">
+    <img src="{{ url_for('static', filename='img/nature2.jpg') }}" alt="Background Image">
+  </div>
+  <div class="container mt-3">
+    <a href="{{ url_for('genera') }}" class="btn btn-primary">
+      <i class="fas fa-arrow-left"></i> Back to Genus Page
+    </a>
+  </div>
+
+  <main id="main">
+    <div class="container mt-5" id="details-container">
+      <!-- Newspaper Header Section -->
+      <div class="newspaper-body">
+        <!-- Top: Image and Content Side by Side -->
+        <div class="top-content">
+          <!-- Left: Image -->
+          <div class="genus-image-container">
+            <img src="" alt="Genus Image" id="genus-image" class="genus-image">
+            <h3 id="genus-name" class="text-center mt-3 genus-name-container"></h3>
+            <p id="authorName" class="text-center mt-2"></p>
+          </div>
+
+
+          <!-- Right: Text Details -->
+          <div class="genus-details-container">
+            <!-- Details Section Below -->
+            <div class="subgenus-details">
+              <h4>About species</h4>
+              <p><strong>Scientific Name:</strong> <span id="scientificName">Loading...</span></p>
+              <p><strong>Scientific Authorship:</strong> <span id="scientificAuthor">Loading...</span></p>
+              <p><strong>Taxonomic Rank:</strong> <span id="taxonomicRank">Loading...</span></p>
+              <p><strong>Taxonomic Status:</strong> <span id="taxonomicStatus">Loading...</span></p>
+              <p><strong>Taxonomic Remarks:</strong> <span id="taxonomicRemarks">Loading...</span></p>
+              <p><strong>Reference:</strong> <span id="reference">Loading...</span></p>
+
+              <!-- Related Image Section -->
+              <p><strong>Related Image:</strong></p>
+              <div id="related-images" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <!-- Dynamic cards for related images will be injected here -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom: Map -->
+        <div class="genus-map-container">
+          <div class="genus-map" id="map"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal for Image Overview -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="Clicked Image" style="width: 100%; height: auto;">
+    </div>
+  </div>
+
+
+
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js" defer></script>
+  <script type="module" src="{{ url_for('static', filename='js/database/genera.js') }}"></script>
+</body>
+
+</html>
